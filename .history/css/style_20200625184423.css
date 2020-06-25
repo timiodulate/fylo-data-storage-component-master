@@ -262,9 +262,7 @@ li {
         top: initial;
         right: 30%;
     }
-    .container .progress .left::after {
-        display: none;
-    }
+    
 
     .container .progress .bar p {
         font-size: initial;

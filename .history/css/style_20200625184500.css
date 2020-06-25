@@ -264,6 +264,7 @@ li {
     }
     .container .progress .left::after {
         display: none;
+        
     }
 
     .container .progress .bar p {

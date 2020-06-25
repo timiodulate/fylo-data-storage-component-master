@@ -130,10 +130,16 @@ li {
     height: 30px;
     width: 30px;
     position: absolute;
-    right: 2.2px;
+
+    right: 0px;
     bottom: -10%;
     background-color: white;
+
+    /* transform: ; */
     transform: skew(30deg) rotate(120deg);
+
+    border-bottom-left-radius: 90%;
+
 }
 
 .container .progress .left span {
@@ -261,9 +267,6 @@ li {
         bottom: 0;
         top: initial;
         right: 30%;
-    }
-    .container .progress .left::after {
-        display: none;
     }
 
     .container .progress .bar p {

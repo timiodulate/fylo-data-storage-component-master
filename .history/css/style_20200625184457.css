@@ -263,7 +263,9 @@ li {
         right: 30%;
     }
     .container .progress .left::after {
+        content: '';
         display: none;
+        
     }
 
     .container .progress .bar p {

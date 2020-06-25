@@ -263,7 +263,15 @@ li {
         right: 30%;
     }
     .container .progress .left::after {
+        content: '';
         display: none;
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        right: 2.2px;
+        bottom: -10%;
+        background-color: white;
+        transform: skew(30deg) rotate(120deg);
     }
 
     .container .progress .bar p {
