@@ -210,6 +210,7 @@ li {
     text-align: center;
     color: white;
     font-weight: bolder;
+
     font-family: var(--body), sans-serif;
 }
 .attribution a {
