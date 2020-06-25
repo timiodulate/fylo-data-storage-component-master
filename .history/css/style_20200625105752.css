@@ -1,0 +1,261 @@
+@import url('http://fonts.googleapis.com/css?family=Raleway');
+
+/* Global Resets */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+
+    /* font-family */
+    --body: Raleway;
+
+    /* font-weight */
+    --normal: 400;
+    --bold: 700;
+
+    /* color */
+    --text: hsl(243, 100%, 93%);
+    --container-bg: hsl(228, 56%, 26%);
+    --icons: hsl(229, 7%, 55%);
+    --icons-bg: hsl(229, 57%, 11%);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+
+    background-image: url(../images/bg-desktop.svg);
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: var(--icons-bg);
+    background-blend-mode: lighten;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    text-decoration: none;
+}
+
+
+
+/* container */
+.container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.container .files,
+.container .progress .bar {
+    background-color: var(--container-bg);
+    border-radius: 9px;
+    padding: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .files,
+.container .progress {
+    height: 160px !important;
+    width: 280px;
+}
+.container .files {
+    border-top-right-radius: 80px;
+    padding-right: 80px;
+    margin-right: 25px;
+}
+.container .files #logo {
+    width: 65%;
+    margin-bottom: 25px;
+}
+.container .files ul li {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+    background-color: var(--icons-bg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+}
+.container .files ul li img {
+    color: var(--icons);
+    width: 20px;
+}
+.container .progress {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 450px;
+}
+.container .progress .left {
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-family: var(--body), sans-serif;
+}
+.container .progress .left span {
+    color: var(--icons);
+    font-size: 8px;
+    text-transform: uppercase;
+    margin-left: 2px;
+}
+.container .progress .bar {
+    width: 100%;
+}
+.container .progress .bar > p {
+    color: var(--icons);
+    font-family: var(--body), sans-serif;
+}
+.container .progress .bar p span {
+    color: var(--text);
+}   
+.container .progress .bar .progress-bar {
+    background-color: var(--icons-bg);
+    margin: 5px 0;
+
+    width: 100%;
+    height: fit-content;
+
+    
+    padding: 2px;
+    
+    position: relative;
+    display: block;
+    border-radius: 20px;
+}
+.container .progress .bar .progress-bar > span {
+    background-image: linear-gradient( hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    display: block;
+    text-indent: -9999px;
+    
+    height: 12px;
+    
+    border-radius: 20px;
+    position: relative;
+}
+.container .progress .bar .progress-bar > span::after {
+    content: ' ';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+
+    border-radius: 50%;
+    z-index: 99999;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+}
+    
+
+
+/* .container .progress .bar progress[value]::-webkit-progress-value {
+    background-color: red;
+} */
+.container .progress .bar .r {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text);
+    font-size: 10px;
+    font-family: var(--body), sans-serif;
+}
+
+
+/* footer */
+.attribution {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    font-size: 13px; 
+    text-align: center;
+    padding: 20px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+
+
+/* Media Queries - Responsiveness */
+/* LG - Large Screen */
+/* @media only screen and (max-width: 992px) {
+    
+} */
+
+/* MD - Medium Screen */
+@media only screen and (max-width: 765px) {
+    body {
+        background-image: url(../images/bg-mobile.svg);
+        background-size: cover; 
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .container .files,
+    .container .progress {
+        width: 320px;
+        /* height: fit-content; */
+    }
+    .container .files {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .container .files img {
+        width: 50%;
+    }
+    .container .files .icons img {
+        /* width: 20%; */
+        /* height: 40px;     */
+        padding: 10px;
+    }
+    .container .progress {
+        height: initial;
+        align-items: flex-start;
+    }
+    .container .progress .left {
+        bottom: -5px;
+        top: initial;
+        right: 35%;
+    }
+    /* .container .progress .bar {
+        width: 100%;
+    } */
+
+
+    .attribution { 
+        font-size: .8rem;
+    }
+}
+
+/* SM - Small Screen */
+/* @media only screen and (max-width: 576px){
+
+} */
+
+
+/* @timiodulate css template */
